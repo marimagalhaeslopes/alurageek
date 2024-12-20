@@ -1,40 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Alura Geek</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Parisienne&family=Press+Start+2P&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"/>
-  </head>
-  <body>
-    <header>
-      <img src="imagens/titulo.svg" class="img__title" />
+<html lang="pt-BR">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="styles/reset.css">
+	<link rel="stylesheet" href="styles/style.css">
+	<title>AluraGeek</title>
+</head>
+<body>
+
+	 <header class="header">
+        <img src="./img/Logo.svg" alt="logo alurageek" />
     </header>
-    <body>
-      <div class="container__add__product">
-        <h1 class="title__add__product">Adicionar Produto</h1>
-        <div class="input__buttons__container">
-        <input class="input__buttons" type="text" name="Nome" placeholder="Digite o nome do produto" />
-        <input class="input__buttons"
-          type="number"
-          name="Preço"
-          placeholder="Digite o preço do produto"
-        />
-        <input type="file" id="file" class="file-input">
-        <!-- Botão personalizado -->
-        <label for="file" class="input__buttons">Imagem do produto</label>
-      </div>
-        <div class="btn__products">
-          <button>Guardar</button>
-          <button>Limpar</button>
+
+
+    <main class="container-principal">
+        <section>
+            <h1>MY PRODUCTS:</h1>
+            <div data-product class="container-produtos"></div>
+        </section>
+
+        <section>
+            <h1>ADD PRODUCT:</h1>
+
+            <form class="container-formulario" data-form>
+                <input data-name placeholder="NAME" type="text">
+                <input data-price placeholder="PRICE" type="text">
+                <input data-image placeholder="IMAGE" type="text">
+                <span data-mensagem class="errorMessage"></span>
+                <div class="container-botoes">
+                    <button type="submit" class="botao-enviar" id="btn-send">SEND</button>
+                    <button type="reset" class="botao-limpar" id="btn-clear">CLEAR</button>
+                </div>
+            </form>
+            
+        </section>
+    </main>
+
+    <footer class="container-rodape">
+        <div>
+            <img src="./img/Logo.svg" alt=""/>
         </div>
-      </div>
-      <div>Meus produtos</div>
-    </body>
-    <footer>Desenvolvido por</footer>
-  </body>
+        <p> Desenvolvido por Mariana Magalhães</p>
+        <small>Alura Latam 2024</small>
+    </footer>
+	<script type="module" src="./js/main.js"></script>
+</body>
 </html>
